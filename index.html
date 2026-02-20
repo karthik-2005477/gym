@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elite gym and fitness club offering strength, cardio, and yoga programs with world-class trainers."
+    />
+    <title>IronPulse Fitness | Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span class="logo-mark">IP</span>
+          <span class="logo-text">IronPulse</span>
+        </div>
+
+        <nav class="nav" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#programs" class="nav-link">Programs</a></li>
+            <li><a href="#trainers" class="nav-link">Trainers</a></li>
+            <li><a href="#plans" class="nav-link">Membership</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="membership.html" class="nav-link">Plans</a></li>
+            <li><a href="contact.html" class="nav-link cta-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-media-overlay"></div>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/videos/gym-hero.mp4" type="video/mp4" />
+        <!-- Fallback image if video is unavailable -->
+      </video>
+      <div class="hero-bg-image"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text" data-animate="fade-up">
+          <p class="eyebrow">Cult-inspired premium fitness</p>
+          <h1>Train Hard. Recover Smart. Repeat.</h1>
+          <p class="hero-subtitle">
+            Join a results-driven community with science-backed programs, elite coaches,
+            and immersive training experiences.
+          </p>
+          <div class="hero-actions">
+            <a href="membership.html" class="btn btn-primary">Join Now</a>
+            <a href="#programs" class="btn btn-ghost">Explore Programs</a>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <span class="metric-number">30k+</span>
+              <span class="metric-label">Workouts Completed</span>
+            </div>
+            <div>
+              <span class="metric-number">4</span>
+              <span class="metric-label">Cities</span>
+            </div>
+            <div>
+              <span class="metric-number">24/7</span>
+              <span class="metric-label">Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <p class="eyebrow">Programs</p>
+          <h2>Built for Every Fitness Goal</h2>
+          <p class="section-subtitle">
+            Curated training tracks designed by performance specialists for real-world results.
+          </p>
+        </div>
+
+        <div class="grid programs-grid">
+          <article class="card program-card" data-animate="fade-up">
+            <div class="card-tag">Strength</div>
+            <h3>Strength &amp; Conditioning</h3>
+            <p>
+              Progressive overload-based training to build muscle, increase strength, and enhance
+              overall performance.
+            </p>
+            <ul class="card-list">
+              <li>Barbell + kettlebell focus</li>
+              <li>Performance tracking</li>
+              <li>Small-group coaching</li>
+            </ul>
+          </article>
+
+          <article class="card program-card" data-animate="fade-up" data-animate-delay="100">
+            <div class="card-tag card-tag-accent">Cardio</div>
+            <h3>HIIT &amp; Metabolic</h3>
+            <p>
+              High-intensity interval training that blends cardio, plyometrics, and functional
+              circuits for maximum burn.
+            </p>
+            <ul class="card-list">
+              <li>Heart-rate guided</li>
+              <li>Interval-based formats</li>
+              <li>Calorie burn tracking</li>
+            </ul>
+          </article>
+
+          <article class="card program-card" data-animate="fade-up" data-animate-delay="200">
+            <div class="card-tag">Mind &amp; Body</div>
+            <h3>Yoga &amp; Mobility</h3>
+            <p>
+              Restore, realign, and recover with guided yoga flows and mobility work to support
+              sustainable training.
+            </p>
+            <ul class="card-list">
+              <li>Guided flows daily</li>
+              <li>Breathwork &amp; recovery</li>
+              <li>Performance mobility</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="section section-alt" id="trainers">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <p class="eyebrow">Trainers</p>
+          <h2>Coached by Performance Experts</h2>
+        </div>
+
+        <div class="grid trainers-grid">
+          <article class="card trainer-card" data-animate="fade-up">
+            <div class="trainer-avatar trainer-avatar-1"></div>
+            <h3>Alex Carter</h3>
+            <p class="trainer-role">Strength &amp; Performance Coach</p>
+            <p class="trainer-bio">
+              10+ years transforming athletes and professionals with strength-first programming.
+            </p>
+          </article>
+
+          <article class="card trainer-card" data-animate="fade-up" data-animate-delay="100">
+            <div class="trainer-avatar trainer-avatar-2"></div>
+            <h3>Riya Desai</h3>
+            <p class="trainer-role">HIIT &amp; Conditioning Specialist</p>
+            <p class="trainer-bio">
+              Metabolic conditioning expert focused on sustainable fat loss and endurance.
+            </p>
+          </article>
+
+          <article class="card trainer-card" data-animate="fade-up" data-animate-delay="200">
+            <div class="trainer-avatar trainer-avatar-3"></div>
+            <h3>Arjun Mehta</h3>
+            <p class="trainer-role">Yoga &amp; Mobility Coach</p>
+            <p class="trainer-bio">
+              Blends traditional yoga with modern mobility practices for high-performing bodies.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <p class="eyebrow">Membership</p>
+          <h2>Flexible Plans. Elite Access.</h2>
+          <p class="section-subtitle">
+            Choose a plan that matches your commitment. Switch or cancel anytime.
+          </p>
+        </div>
+
+        <!-- Pricing Toggle -->
+        <div class="billing-toggle" data-animate="fade-up">
+          <span class="billing-label active" data-billing="monthly">Monthly</span>
+          <button class="billing-switch" id="billingToggle" aria-label="Toggle billing period">
+            <span class="billing-knob"></span>
+          </button>
+          <span class="billing-label" data-billing="yearly">
+            Yearly
+            <span class="billing-save">Save 20%</span>
+          </span>
+        </div>
+
+        <div class="grid pricing-grid">
+          <article class="card pricing-card" data-animate="fade-up">
+            <h3>Basic</h3>
+            <p class="pricing-price">
+              <span class="price-amount" data-monthly="₹1,999" data-yearly="₹19,199">₹1,999</span>
+              <span class="price-duration">/mo</span>
+            </p>
+            <ul class="card-list">
+              <li>Gym floor access</li>
+              <li>Open gym hours</li>
+              <li>Locker &amp; showers</li>
+            </ul>
+            <a href="membership.html" class="btn btn-outline">Get Started</a>
+          </article>
+
+          <article class="card pricing-card pricing-card-featured" data-animate="fade-up" data-animate-delay="100">
+            <div class="card-tag card-tag-accent">Most Popular</div>
+            <h3>Pro</h3>
+            <p class="pricing-price">
+              <span class="price-amount" data-monthly="₹2,999" data-yearly="₹28,799">₹2,999</span>
+              <span class="price-duration">/mo</span>
+            </p>
+            <ul class="card-list">
+              <li>All group classes</li>
+              <li>Program tracking app</li>
+              <li>Monthly body scan</li>
+            </ul>
+            <a href="membership.html" class="btn btn-primary">Join Pro</a>
+          </article>
+
+          <article class="card pricing-card" data-animate="fade-up" data-animate-delay="200">
+            <h3>Elite</h3>
+            <p class="pricing-price">
+              <span class="price-amount" data-monthly="₹4,999" data-yearly="₹47,999">₹4,999</span>
+              <span class="price-duration">/mo</span>
+            </p>
+            <ul class="card-list">
+              <li>Unlimited personal training</li>
+              <li>Priority class booking</li>
+              <li>Performance lab access</li>
+            </ul>
+            <a href="membership.html" class="btn btn-outline">Go Elite</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <p class="eyebrow">Community</p>
+          <h2>What Our Members Say</h2>
+        </div>
+
+        <div class="grid testimonials-grid">
+          <article class="card testimonial-card" data-animate="fade-up">
+            <p class="testimonial-quote">
+              “I’ve trained at multiple gyms and nothing comes close to the coaching and energy here.”
+            </p>
+            <p class="testimonial-name">— Neha, Product Manager</p>
+          </article>
+
+          <article class="card testimonial-card" data-animate="fade-up" data-animate-delay="100">
+            <p class="testimonial-quote">
+              “The blend of strength, conditioning, and yoga helped me hit my goals without burning out.”
+            </p>
+            <p class="testimonial-name">— Karan, Consultant</p>
+          </article>
+
+          <article class="card testimonial-card" data-animate="fade-up" data-animate-delay="200">
+            <p class="testimonial-quote">
+              “The app-based tracking and structured programs feel just like a premium fitness platform.”
+            </p>
+            <p class="testimonial-name">— Aisha, Designer</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">IP</span>
+            <span class="logo-text">IronPulse</span>
+          </div>
+          <p>
+            High-performance training spaces, data-driven coaching, and a community built to push
+            limits.
+          </p>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <h4>Contact</h4>
+            <p>info@ironpulse.fit</p>
+            <p>+91-98765-43210</p>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <p>Koramangala, Bengaluru</p>
+            <p>Open 5 AM – 11 PM</p>
+          </div>
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="YouTube">YT</a>
+              <a href="#" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> IronPulse Fitness. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

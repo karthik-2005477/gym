@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact IronPulse Fitness for memberships, corporate plans, or facility tours."
+    />
+    <title>IronPulse Fitness | Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span class="logo-mark">IP</span>
+          <span class="logo-text">IronPulse</span>
+        </div>
+
+        <nav class="nav" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="index.html#hero" class="nav-link">Home</a></li>
+            <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+            <li><a href="index.html#trainers" class="nav-link">Trainers</a></li>
+            <li><a href="membership.html" class="nav-link">Membership</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Contact Hero -->
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-text" data-animate="fade-up">
+            <p class="eyebrow">Contact</p>
+            <h1>Let’s Talk Training, Not Just Memberships.</h1>
+            <p>
+              Reach out for membership queries, corporate wellness programs, or to schedule a tour
+              of our facility.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form + Info -->
+      <section class="section">
+        <div class="container grid contact-grid">
+          <form class="form" id="contactForm" novalidate data-animate="fade-up">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" name="name" required />
+                <span class="form-error" data-for="contactName"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" required />
+                <span class="form-error" data-for="contactEmail"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactPhone">Phone</label>
+                <input type="tel" id="contactPhone" name="phone" required />
+                <span class="form-error" data-for="contactPhone"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactType">Inquiry Type</label>
+                <select id="contactType" name="type" required>
+                  <option value="">Select an option</option>
+                  <option value="membership">Membership</option>
+                  <option value="corporate">Corporate</option>
+                  <option value="tour">Facility Tour</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" data-for="contactType"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="4"
+                required
+                placeholder="Tell us how we can help."
+              ></textarea>
+              <span class="form-error" data-for="contactMessage"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="contactSuccessMessage" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info" data-animate="fade-up" data-animate-delay="100">
+            <h2>Visit the Club</h2>
+            <p>
+              IronPulse Fitness, Koramangala<br />
+              Bengaluru, Karnataka
+            </p>
+
+            <h3>Contact</h3>
+            <p>info@ironpulse.fit</p>
+            <p>+91-98765-43210</p>
+
+            <h3>Hours</h3>
+            <p>Weekdays: 5 AM – 11 PM</p>
+            <p>Weekends: 6 AM – 10 PM</p>
+
+            <div class="contact-social">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Embed -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2>Find Us on the Map</h2>
+          </div>
+
+          <div class="map-wrapper" data-animate="fade-up" data-animate-delay="100">
+            <!-- Replace src with your actual Google Maps embed URL if needed -->
+            <iframe
+              title="IronPulse Fitness Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6632602680825!2d77.6101166750778!3d12.930424987384024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14502b514795%3A0x9fdf042ad45f48b2!2sKoramangala,%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (shared) -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">IP</span>
+            <span class="logo-text">IronPulse</span>
+          </div>
+          <p>
+            High-performance training spaces, data-driven coaching, and a community built to push
+            limits.
+          </p>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <h4>Contact</h4>
+            <p>info@ironpulse.fit</p>
+            <p>+91-98765-43210</p>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <p>Koramangala, Bengaluru</p>
+            <p>Open 5 AM – 11 PM</p>
+          </div>
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="YouTube">YT</a>
+              <a href="#" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> IronPulse Fitness. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

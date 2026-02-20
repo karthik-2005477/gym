@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Choose from flexible membership plans at IronPulse Fitness, including Basic, Pro, and Elite tiers."
+    />
+    <title>IronPulse Fitness | Membership</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span class="logo-mark">IP</span>
+          <span class="logo-text">IronPulse</span>
+        </div>
+
+        <nav class="nav" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="index.html#hero" class="nav-link">Home</a></li>
+            <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+            <li><a href="index.html#trainers" class="nav-link">Trainers</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link cta-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Membership Hero -->
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-text" data-animate="fade-up">
+            <p class="eyebrow">Membership</p>
+            <h1>Pick Your Training Tier</h1>
+            <p>
+              From first-time lifters to advanced athletes, choose a plan aligned with your pace,
+              goals, and lifestyle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing with Toggle -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2>Flexible Pricing, Real Commitment</h2>
+            <p class="section-subtitle">
+              Switch between monthly and yearly billing any time. Yearly plans include discounted
+              rates.
+            </p>
+          </div>
+
+          <div class="billing-toggle" data-animate="fade-up">
+            <span class="billing-label active" data-billing="monthly">Monthly</span>
+            <button class="billing-switch" id="billingToggle" aria-label="Toggle billing period">
+              <span class="billing-knob"></span>
+            </button>
+            <span class="billing-label" data-billing="yearly">
+              Yearly
+              <span class="billing-save">Save 20%</span>
+            </span>
+          </div>
+
+          <div class="grid pricing-grid">
+            <article class="card pricing-card" data-animate="fade-up">
+              <h3>Basic</h3>
+              <p class="pricing-price">
+                <span class="price-amount" data-monthly="₹1,999" data-yearly="₹19,199">₹1,999</span>
+                <span class="price-duration">/mo</span>
+              </p>
+              <ul class="card-list">
+                <li>Gym floor access</li>
+                <li>Open gym hours</li>
+                <li>Locker &amp; showers</li>
+              </ul>
+              <a href="#join" class="btn btn-outline scroll-link">Choose Basic</a>
+            </article>
+
+            <article
+              class="card pricing-card pricing-card-featured"
+              data-animate="fade-up"
+              data-animate-delay="100"
+            >
+              <div class="card-tag card-tag-accent">Most Popular</div>
+              <h3>Pro</h3>
+              <p class="pricing-price">
+                <span class="price-amount" data-monthly="₹2,999" data-yearly="₹28,799">₹2,999</span>
+                <span class="price-duration">/mo</span>
+              </p>
+              <ul class="card-list">
+                <li>All group classes</li>
+                <li>Program tracking app</li>
+                <li>Monthly body scan</li>
+              </ul>
+              <a href="#join" class="btn btn-primary scroll-link">Choose Pro</a>
+            </article>
+
+            <article class="card pricing-card" data-animate="fade-up" data-animate-delay="200">
+              <h3>Elite</h3>
+              <p class="pricing-price">
+                <span class="price-amount" data-monthly="₹4,999" data-yearly="₹47,999">₹4,999</span>
+                <span class="price-duration">/mo</span>
+              </p>
+              <ul class="card-list">
+                <li>Unlimited personal training</li>
+                <li>Priority class booking</li>
+                <li>Performance lab access</li>
+              </ul>
+              <a href="#join" class="btn btn-outline scroll-link">Choose Elite</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join Form -->
+      <section class="section section-alt" id="join">
+        <div class="container grid membership-form-grid">
+          <div data-animate="fade-up">
+            <p class="eyebrow">Join Now</p>
+            <h2>Lock In Your Spot</h2>
+            <p>
+              Fill in your details and our team will reach out within 24 hours to complete your
+              onboarding and schedule your first session.
+            </p>
+          </div>
+
+          <form class="form" id="joinForm" novalidate data-animate="fade-up" data-animate-delay="100">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="joinName">Full Name</label>
+                <input type="text" id="joinName" name="name" required />
+                <span class="form-error" data-for="joinName"></span>
+              </div>
+              <div class="form-group">
+                <label for="joinEmail">Email</label>
+                <input type="email" id="joinEmail" name="email" required />
+                <span class="form-error" data-for="joinEmail"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="joinPhone">Phone</label>
+                <input type="tel" id="joinPhone" name="phone" required />
+                <span class="form-error" data-for="joinPhone"></span>
+              </div>
+              <div class="form-group">
+                <label for="joinPlan">Preferred Plan</label>
+                <select id="joinPlan" name="plan" required>
+                  <option value="">Select a plan</option>
+                  <option value="basic">Basic</option>
+                  <option value="pro">Pro</option>
+                  <option value="elite">Elite</option>
+                </select>
+                <span class="form-error" data-for="joinPlan"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="joinGoals">Primary Goal</label>
+              <textarea
+                id="joinGoals"
+                name="goals"
+                rows="3"
+                placeholder="e.g. Lose fat, build strength, improve mobility"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <p class="form-success" id="joinSuccessMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (shared) -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">IP</span>
+            <span class="logo-text">IronPulse</span>
+          </div>
+          <p>
+            High-performance training spaces, data-driven coaching, and a community built to push
+            limits.
+          </p>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <h4>Contact</h4>
+            <p>info@ironpulse.fit</p>
+            <p>+91-98765-43210</p>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <p>Koramangala, Bengaluru</p>
+            <p>Open 5 AM – 11 PM</p>
+          </div>
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="YouTube">YT</a>
+              <a href="#" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> IronPulse Fitness. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
