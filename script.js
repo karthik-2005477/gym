@@ -1,5 +1,5 @@
 // IronPulse Fitness - Core Interactivity
-// Handles navigation, smooth scrolling, animations, pricing toggle, and form validation.
+// Handles navigation, smooth scrolling, animations, pricing toggle, form validation, and EmailJS integration.
 
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
@@ -152,7 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return digits.length >= 8;
   }
 
-  // Contact form validation
+  // ============================================
+  // CONTACT FORM WITH EMAILJS INTEGRATION
+  // ============================================
+  // Replace these values with your EmailJS credentials:
+  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g., "service_abc123"
+  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g., "template_xyz789"
+
   const contactForm = document.getElementById("contactForm");
   const contactSuccessMessage = document.getElementById("contactSuccessMessage");
 
@@ -171,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contactSuccessMessage.textContent = "";
       }
 
+      // Validation
       if (nameInput) {
         if (!nameInput.value.trim()) {
           setFieldError(nameInput, "Please enter your name.");
@@ -222,17 +229,59 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
+      // If validation passes, send email via EmailJS
       if (!hasError) {
-        contactForm.reset();
+        // Show loading message
         if (contactSuccessMessage) {
-          contactSuccessMessage.textContent =
-            "Thanks for reaching out. We’ll get back to you shortly.";
+          contactSuccessMessage.textContent = "Sending your message...";
+          contactSuccessMessage.style.color = "#ff8a3c";
         }
+
+        // Prepare email payload
+        const emailParams = {
+          from_name: nameInput ? nameInput.value.trim() : "",
+          from_email: emailInput ? emailInput.value.trim() : "",
+          phone: phoneInput ? phoneInput.value.trim() : "",
+          inquiry_type: typeSelect ? typeSelect.value : "",
+          message: messageInput ? messageInput.value.trim() : "",
+        };
+
+        // Send email using EmailJS
+        emailjs
+          .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, emailParams)
+          .then(
+            () => {
+              // Success
+              if (contactSuccessMessage) {
+                contactSuccessMessage.textContent =
+                  "Thanks for reaching out. We'll get back to you shortly.";
+                contactSuccessMessage.style.color = "#ff8a3c";
+              }
+              if (contactForm) {
+                contactForm.reset();
+              }
+            },
+            (error) => {
+              // Error
+              console.error("EmailJS error:", error);
+              if (contactSuccessMessage) {
+                contactSuccessMessage.textContent =
+                  "Something went wrong. Please try again or contact us directly.";
+                contactSuccessMessage.style.color = "#ff4d5a";
+              }
+            }
+          );
       }
     });
   }
 
-  // Join form validation (membership page)
+  // ============================================
+  // JOIN FORM (MEMBERSHIP PAGE) - OPTIONAL EMAILJS
+  // ============================================
+  // Uncomment and configure if you want to send emails for membership applications too
+  // const EMAILJS_JOIN_SERVICE_ID = "YOUR_SERVICE_ID";
+  // const EMAILJS_JOIN_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+
   const joinForm = document.getElementById("joinForm");
   const joinSuccessMessage = document.getElementById("joinSuccessMessage");
 
@@ -245,11 +294,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const emailInput = document.getElementById("joinEmail");
       const phoneInput = document.getElementById("joinPhone");
       const planSelect = document.getElementById("joinPlan");
+      const goalsInput = document.getElementById("joinGoals");
 
       if (joinSuccessMessage) {
         joinSuccessMessage.textContent = "";
       }
 
+      // Validation
       if (nameInput) {
         if (!nameInput.value.trim()) {
           setFieldError(nameInput, "Please enter your name.");
@@ -292,14 +343,54 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
+      // If validation passes
       if (!hasError) {
+        // Option 1: Just show success message (current behavior)
         joinForm.reset();
         if (joinSuccessMessage) {
           joinSuccessMessage.textContent =
             "Your application has been submitted. Our team will connect with you soon.";
         }
+
+        // Option 2: Uncomment below to send email via EmailJS for membership applications
+        /*
+        if (joinSuccessMessage) {
+          joinSuccessMessage.textContent = "Submitting your application...";
+          joinSuccessMessage.style.color = "#ff8a3c";
+        }
+
+        const emailParams = {
+          from_name: nameInput ? nameInput.value.trim() : "",
+          from_email: emailInput ? emailInput.value.trim() : "",
+          phone: phoneInput ? phoneInput.value.trim() : "",
+          plan: planSelect ? planSelect.value : "",
+          goals: goalsInput ? goalsInput.value.trim() : "",
+        };
+
+        emailjs
+          .send(EMAILJS_JOIN_SERVICE_ID, EMAILJS_JOIN_TEMPLATE_ID, emailParams)
+          .then(
+            () => {
+              if (joinSuccessMessage) {
+                joinSuccessMessage.textContent =
+                  "Your application has been submitted. Our team will connect with you soon.";
+                joinSuccessMessage.style.color = "#ff8a3c";
+              }
+              if (joinForm) {
+                joinForm.reset();
+              }
+            },
+            (error) => {
+              console.error("EmailJS error:", error);
+              if (joinSuccessMessage) {
+                joinSuccessMessage.textContent =
+                  "Something went wrong. Please try again or contact us directly.";
+                joinSuccessMessage.style.color = "#ff4d5a";
+              }
+            }
+          );
+        */
       }
     });
   }
 });
-
