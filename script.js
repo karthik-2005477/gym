@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // CONTACT FORM WITH EMAILJS INTEGRATION
   // ============================================
   // Replace these values with your EmailJS credentials:
-  const EMAILJS_SERVICE_ID = "service_luwhspg"; // e.g., "service_abc123"
+  const EMAILJS_SERVICE_ID = "service_qg4t7vn"; // e.g., "service_abc123"
   const EMAILJS_TEMPLATE_ID = "template_86ppadl"; // e.g., "template_xyz789"
 
   const contactForm = document.getElementById("contactForm");
@@ -394,4 +394,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
